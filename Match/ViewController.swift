@@ -13,9 +13,19 @@ class ViewController: UIViewController {
     let model = CardModel()
     var cards = [Card]()
     
+    var stackViewArray = [UIStackView]()
+    @IBOutlet weak var firstStackView: UIStackView!
+    @IBOutlet weak var secondStackView: UIStackView!
+    @IBOutlet weak var thirdStackView: UIStackView!
+    @IBOutlet weak var fourthStackView: UIStackView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //put the 4 stackViews into an array
+        stackViewArray += [firstStackView, secondStackView, thirdStackView, fourthStackView]
         
         cards = model.getCards()
     }

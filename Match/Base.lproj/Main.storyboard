@@ -17,82 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Dt-hb-Tsi">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Dt-hb-Tsi">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7FL-0C-Nfd">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7FL-0C-Nfd">
                                         <rect key="frame" x="0.0" y="0.0" width="667" height="710"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6no-WF-0xc">
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6no-WF-0xc">
                                                 <rect key="frame" x="78.5" y="0.0" width="510" height="170"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-jU-eYf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="uBK-6C-q0v">
-                                                        <rect key="frame" x="130" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="o73-R6-ODt">
-                                                        <rect key="frame" x="260" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="XFj-Xn-slG">
-                                                        <rect key="frame" x="390" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                </subviews>
                                                 <viewLayoutGuide key="safeArea" id="LEK-fk-gML"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-nN-JBq">
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-nN-JBq">
                                                 <rect key="frame" x="78.5" y="180" width="510" height="170"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="Vdp-CW-tYy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="JAb-Zy-MiA">
-                                                        <rect key="frame" x="130" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="ZM3-1R-BOd">
-                                                        <rect key="frame" x="260" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="jNh-y2-RC0">
-                                                        <rect key="frame" x="390" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                </subviews>
                                                 <viewLayoutGuide key="safeArea" id="VtQ-yr-787"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rp5-cs-sl1">
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rp5-cs-sl1">
                                                 <rect key="frame" x="78.5" y="360" width="510" height="170"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="iYb-Ee-dXZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="0rZ-Lg-ouB">
-                                                        <rect key="frame" x="130" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="WSu-YT-dAN">
-                                                        <rect key="frame" x="260" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="Vv0-jR-XeE">
-                                                        <rect key="frame" x="390" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                </subviews>
                                                 <viewLayoutGuide key="safeArea" id="PTe-jh-gKB"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QLT-JV-5kg">
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QLT-JV-5kg">
                                                 <rect key="frame" x="78.5" y="540" width="510" height="170"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="SPS-j3-XIi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="gQt-L2-uak">
-                                                        <rect key="frame" x="130" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="BHp-fT-l7V">
-                                                        <rect key="frame" x="260" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ace" translatesAutoresizingMaskIntoConstraints="NO" id="SMO-7x-vuI">
-                                                        <rect key="frame" x="390" y="0.0" width="120" height="170"/>
-                                                    </imageView>
-                                                </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -115,12 +59,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstStackView" destination="6no-WF-0xc" id="Eb3-u4-CgJ"/>
+                        <outlet property="fourthStackView" destination="QLT-JV-5kg" id="LBb-GG-UbA"/>
+                        <outlet property="secondStackView" destination="qXx-nN-JBq" id="PNW-OA-XkD"/>
+                        <outlet property="thirdStackView" destination="rp5-cs-sl1" id="WoU-f2-d2H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="ace" width="120" height="170"/>
-    </resources>
 </document>
