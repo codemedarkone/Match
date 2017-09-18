@@ -53,5 +53,9 @@ class Card: UIView {
         // Drawing code
     }
     */
+    
+    func flipup() {
+        cardImageView.image = UIImage(named: cardNames[cardValue])
+    }
 
 }

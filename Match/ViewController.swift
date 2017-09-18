@@ -52,6 +52,10 @@ class ViewController: UIViewController {
                     let card = cards[cardIndex]
                     card.translatesAutoresizingMaskIntoConstraints = false
                     
+                    // create a gesture recognizer and attach it to the card
+                    let recognizer = UITapGestureRecognizer(target: self, action: #selector(cardTapped(gestureRecognizer:)))
+                    card.addGestureRecognizer(recognizer)
+                    
                     // Set the size of the card object
                     let heightConstraint = NSLayoutConstraint(item: card, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 170)
                     
@@ -68,6 +72,14 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @objc func cardTapped(gestureRecognizer:UITapGestureRecognizer) {
+        // card is tapped
+        let card = gestureRecognizer.view as! Card
+        
+        // reveal card
+        card.flipup()
     }
 
     override func didReceiveMemoryWarning() {
