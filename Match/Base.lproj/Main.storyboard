@@ -52,13 +52,21 @@
                                     <constraint firstAttribute="trailing" secondItem="7FL-0C-Nfd" secondAttribute="trailing" id="qG9-VS-ph2"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzs-bL-Qq5">
+                                <rect key="frame" x="20" y="20" width="27" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="0.31995488556338031" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hzs-bL-Qq5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0QO-X4-Gdk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Dt-hb-Tsi" secondAttribute="bottom" id="5Xc-R9-VLF"/>
                             <constraint firstItem="1Dt-hb-Tsi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GCo-Yb-hLd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dx7-Wy-iWK" secondAttribute="trailing" id="Hzr-af-KPk"/>
                             <constraint firstItem="1Dt-hb-Tsi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J9a-uu-8e8"/>
+                            <constraint firstItem="hzs-bL-Qq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VyW-5O-rCI"/>
                             <constraint firstItem="Dx7-Wy-iWK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aPE-V3-Nax"/>
                             <constraint firstItem="Dx7-Wy-iWK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bp1-Ec-hUb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Dt-hb-Tsi" secondAttribute="trailing" id="qaA-wW-RMn"/>
@@ -67,6 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="countDownLabel" destination="hzs-bL-Qq5" id="UZw-Kx-Bn0"/>
                         <outlet property="firstStackView" destination="6no-WF-0xc" id="Eb3-u4-CgJ"/>
                         <outlet property="fourthStackView" destination="QLT-JV-5kg" id="LBb-GG-UbA"/>
                         <outlet property="secondStackView" destination="qXx-nN-JBq" id="PNW-OA-XkD"/>

@@ -10,32 +10,67 @@ import UIKit
 
 class Card: UIView {
 
-    let cardImageView = UIImageView()
+    let backImageView = UIImageView()
+    let frontImageView = UIImageView()
+    
     var cardValue = 0 
     let cardNames = ["card2", "card3", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "jack", "queen", "king", "ace"]
+    
+    var flippedUp = false
+    var isDone = false {
+        didSet {
+            if isDone == true {
+                // remove the image from the cardimageview
+                
+                UIView.animate(withDuration: 1, delay: 2, options: .curveEaseOut, animations: {
+                    
+                    self.backImageView.alpha = 0
+                    self.frontImageView.alpha = 0
+                    
+                }, completion: nil)
+                
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        // custom functionality
-        
         // add image view into view
-        addSubview(cardImageView)
+        addSubview(backImageView)
         
         //TODO: Initialize the imageview with an image
-        cardImageView.translatesAutoresizingMaskIntoConstraints = false
-        cardImageView.image = UIImage(named: "back")
+        backImageView.translatesAutoresizingMaskIntoConstraints = false
+        backImageView.image = UIImage(named: "back")
+        
+        applySizeConstraints(imageView: backImageView)
+        applyPositionConstraints(imageView: backImageView)
+        
+        //add front imageView into view
+        addSubview(frontImageView)
+        
+        frontImageView.translatesAutoresizingMaskIntoConstraints = false
+        applySizeConstraints(imageView: frontImageView)
+        applyPositionConstraints(imageView: frontImageView)
+        
+       
+    }
+    
+    func applySizeConstraints(imageView:UIImageView){
         
         //TODO: set constraints for the imageview
-        let heightConstraint = NSLayoutConstraint(item: cardImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 170)
+        let heightConstraint = NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 170)
         
-        let widthConstraint = NSLayoutConstraint(item: cardImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 120)
+        let widthConstraint = NSLayoutConstraint(item: imageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 120)
         
-        cardImageView.addConstraints([widthConstraint, heightConstraint])
+        imageView.addConstraints([widthConstraint, heightConstraint])
+    }
+    
+    func applyPositionConstraints(imageView:UIImageView) {
         
-        let topConstraint = NSLayoutConstraint(item: cardImageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
+        let topConstraint = NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
         
-        let leftConstraint = NSLayoutConstraint(item: cardImageView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0)
+        let leftConstraint = NSLayoutConstraint(item: imageView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0)
         
         addConstraints([topConstraint, leftConstraint])
     }
@@ -54,8 +89,29 @@ class Card: UIView {
     }
     */
     
-    func flipup() {
-        cardImageView.image = UIImage(named: cardNames[cardValue])
+    func flipUp() {
+        
+        //set the front card image
+        frontImageView.image = UIImage(named: cardNames[cardValue])
+        
+        //run the transition animation
+        UIImageView.transition(from: backImageView, to: frontImageView, duration: 1, options: .transitionFlipFromLeft, completion: nil)
+        
+        applyPositionConstraints(imageView: frontImageView)
+        
+        //set the flag
+        flippedUp = true
+    }
+    
+   @objc func flipDown() {
+        
+        //run the transition animation
+        UIView.transition(from: frontImageView, to: backImageView, duration: 1, options: .transitionFlipFromRight, completion: nil)
+        
+        applyPositionConstraints(imageView: backImageView)
+        
+        //set the flag
+        flippedUp = false
     }
 
 }
